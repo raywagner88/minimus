@@ -9,7 +9,7 @@ import { AddCardComponent } from './add-card/add-card.component';
 import { DetailsComponent } from './details/details.component';
 import { UiService } from './ui.service';
 import { WeatherService } from './weather.service';
-import { Http } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,12 +21,12 @@ import { Http } from '@angular/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     UiService,
-    WeatherService,
-    Http
+    WeatherService
   ],
   bootstrap: [AppComponent]
 })
