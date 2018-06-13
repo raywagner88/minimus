@@ -6,7 +6,7 @@ import { UiService } from './ui.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   showMenu = false;
   darkModeActive: boolean;
 

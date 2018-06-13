@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
 import { AddCardComponent } from './add-card/add-card.component';
 import { DetailsComponent } from './details/details.component';
+import { UiService } from './ui.service';
+import { WeatherService } from './weather.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { DetailsComponent } from './details/details.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    UiService,
+    WeatherService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
