@@ -59,12 +59,13 @@ export class WeatherService {
   }
 
   getCurrentWind(city: string, metric: 'metric' | 'imperial' = 'metric'): Subject<number> {
-    const windSpeedSubject = new Subject<number>();
-    this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${metric}&APPID=a7f1efd2d8589d5e37c37f8fa08679c0`)
+    const dataSubject = new Subject<number>();
+    this.http.get(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${metric}&APPID=a7f1efd2d8589d5e37c37f8fa08679c0`)
       .subscribe((weather: any) => {
-        windSpeedSubject.next(Math.round(weather.main.wind));
+        dataSubject.next(Math.round(Math.round(weather.wind.speed)));
       });
-    return windSpeedSubject;
+    return dataSubject;
   }
 
   getMaxTemp(city: string, metric: 'metric' | 'imperial' = 'metric'): Subject<number> {
