@@ -1,13 +1,9 @@
 {
   "name": "minimus",
   "version": "0.0.0",
-  "engines": {
-    "node": "10.4.0",
-    "npm": "6.1.0"
-  },
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -16,8 +12,8 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^6.0.2",
     "@angular/cli": "~6.0.3",
+    "@angular/animations": "^6.0.2",
     "@angular/common": "^6.0.2",
     "@angular/compiler": "^6.0.2",
     "@angular/core": "^6.0.2",
@@ -27,7 +23,6 @@
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.2",
     "core-js": "^2.5.4",
-    "express": "^4.16.3",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
