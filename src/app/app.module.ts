@@ -10,6 +10,9 @@ import { DetailsComponent } from './pages/details/details.component';
 import { UiService } from './services/ui/ui.service';
 import { WeatherService } from './services/weather/weather.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AddComponent } from './pages/add/add.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     WeatherCardComponent,
     AddCardComponent,
-    DetailsComponent
+    DetailsComponent,
+    AddComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
