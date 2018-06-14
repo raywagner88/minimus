@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UiService } from '../ui.service';
+import { UiService } from '../../services/ui/ui.service';
 
 @Component({
   selector: 'app-add-card',

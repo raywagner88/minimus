@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { WeatherService } from '../weather.service';
-import { UiService } from '../ui.service';
+import { WeatherService } from '../../services/weather/weather.service';
+import { UiService } from '../../services/ui/ui.service';
 
 @Component({
   selector: 'app-weather-card',
