@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class DetailsComponent implements OnInit, OnDestroy {
 
-  temperature: number;
+  temp: number;
   wind: number;
   hum: number;
   today: string;
@@ -56,7 +56,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
     this.activateRouter.paramMap.subscribe((route: any) => {
       this.city = route.params.city;
       this.sub1 = this.weatherService.getWeatherState(this.city).subscribe((state) => this.state = state);
-      this.sub2 = this.weatherService.getCurrentTemp(this.city).subscribe((temperature) => this.temperature = temperature);
+      this.sub2 = this.weatherService.getCurrentTemp(this.city).subscribe((temperature) => this.temp = temperature);
       this.sub3 = this.weatherService.getCurrentHum(this.city).subscribe((humidity) => this.hum = humidity);
       this.sub4 = this.weatherService.getCurrentWind(this.city).subscribe((windspeed) => this.wind = windspeed);
       this.sub5 = this.weatherService.getForecast(this.city).subscribe((data: any) => {
